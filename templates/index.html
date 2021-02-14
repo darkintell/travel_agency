@@ -22,27 +22,27 @@
 	<!-- Libs CSS
 	============================================ -->
 	<link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
-	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/persian-datepicker-0.4.5.min.css">
-	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="css/themecss/lib.css" rel="stylesheet">
-	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-	<link href="js/minicolors/miniColors.css" rel="stylesheet">
+	<link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/persian-datepicker-0.4.5.min.css' %}">
+	<link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+	<link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+	<link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+	<link href="{% static 'js/minicolors/miniColors.css' %}" rel="stylesheet">
 	<!-- Theme CSS
 	============================================ -->
-	<link href="css/themecss/so_sociallogin.css" rel="stylesheet">
-	<link href="css/themecss/so_searchpro.css" rel="stylesheet">
-	<link href="css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="css/themecss/so-categories.css" rel="stylesheet">
-	<link href="css/themecss/so-listing-tabs.css" rel="stylesheet">
-	<link href="css/themecss/so-category-slider.css" rel="stylesheet">
-	<link href="css/themecss/so-newletter-popup.css" rel="stylesheet">
-	<link href="css/footer/footer1.css" rel="stylesheet">
-	<link href="css/header/header1.css" rel="stylesheet">
-	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-	<link href="css/quickview/quickview.css" rel="stylesheet">
+	<link href="{% static 'css/themecss/so_sociallogin.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so_searchpro.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-category-slider.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-newletter-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/footer/footer1.css' %}" rel="stylesheet">
+	<link href="{% static 'css/header/header1.css' %}" rel="stylesheet">
+	<link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+	<link href="{% static 'css/quickview/quickview.css' %}" rel="stylesheet">
 </head>
 
 <body class="common-home res layout-1">
@@ -67,18 +67,18 @@
 						<form action="#" method="post" enctype="multipart/form-data">
 							<div class="btn-group">
 								<button class="btn-link dropdown-toggle" data-toggle="dropdown">
-									<img src="image/catalog/flags/ar.png" alt="Persian" title="فارسی">
+									<img src="{% static 'image/catalog/flags/ar.png' %}" alt="Persian" title="فارسی">
 									<span class="hidden-xs hidden-sm hidden-md"></span> <i class="fa fa-angle-down"></i>
 								</button>
 								<ul class="dropdown-menu">
 									<li>
 										<button class="btn-block language-select" type="button" name="ar-ar"><img
-												src="image/catalog/flags/ar.png" alt="Persian" title="فارسی" />
+												src="{% static 'image/catalog/flags/ar.png' %}" alt="Persian" title="فارسی" />
 											فارسی</button>
 									</li>
 									<li>
 										<button class="btn-block language-select" type="button" name="en-gb"><img
-												src="image/catalog/flags/gb.png" alt="English" title="انگلیسی" />
+												src="{% static 'image/catalog/flags/gb.png' %}" alt="English" title="انگلیسی" />
 											انگلیسی</button>
 									</li>
 								</ul>
@@ -98,7 +98,7 @@
 					<div class="row">
 						<div class="col-lg-3 col-xs-3 header-logo pull-left">
 							<div class="navbar-logo">
-								<a href="index-portkey.html"><img src="image/catalog/demo/logo/logo.png" alt="Your Store"
+								<a href="index-portkey.html"><img src="{% static 'image/catalog/demo/logo/logo.png' %}" alt="Your Store"
 										width="118" height="36" title="آژنس مسافرتی ما"></a>
 							</div>
 						</div>
@@ -430,7 +430,7 @@
 									<div class="so-homeslider sohomeslider-inner-1">
 										<div class="item">
 											<a href="#" title="اسلاید 1-1" target="_self">
-												<img class="responsive" src="image/catalog/demo/slider/home1/slider.jpg"
+												<img class="responsive" src="{% static 'image/catalog/demo/slider/home1/slider.jpg' %}"
 													alt="اسلاید 1-1">
 											</a>
 											<div class="info">
@@ -443,14 +443,14 @@
 											</div>
 											<div class="info-right">
 												<img class="responsive"
-													src="image/catalog/demo/slider/home1/text-right.png"
+													src="{% static 'image/catalog/demo/slider/home1/text-right.png' %}"
 													alt="slide 1v1">
 											</div>
 										</div>
 										<div class="item">
 											<a href="#" title="اسلاید 2-1" target="_self">
 												<img class="responsive"
-													src="image/catalog/demo/slider/home1/slider2.jpg" alt="اسلاید 2-1">
+													src="{% static 'image/catalog/demo/slider/home1/slider2.jpg' %}" alt="اسلاید 2-1">
 											</a>
 											<div class="info">
 												<div class="top">مقصد</div>
@@ -462,7 +462,7 @@
 											</div>
 											<div class="info-right">
 												<img class="responsive"
-													src="image/catalog/demo/slider/home1/text-right.png"
+													src="{% static 'image/catalog/demo/slider/home1/text-right.png' %}"
 													alt="slide 1v2">
 											</div>
 										</div>
@@ -574,7 +574,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="tour-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/t1.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/t1.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -609,7 +609,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="tour-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/t2.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/t2.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -644,7 +644,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="tour-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/t3.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/t3.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -679,7 +679,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="tour-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/t4.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/t4.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -728,19 +728,19 @@
 						<div class="container page-builder-ltr">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 item">
-									<img src="image/icon/promo1.png" alt="stay safe" class="img-responsive">
+									<img src="{% static 'image/icon/promo1.png' %}" alt="stay safe" class="img-responsive">
 									<h3>پرواز های ایمن</h3>
 									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
 										سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 item">
-									<img src="image/icon/promo2.png" alt="Quality Services" class="img-responsive">
+									<img src="{% static 'image/icon/promo2.png' %}" alt="Quality Services" class="img-responsive">
 									<h3>خدمات با کیفیت بالا</h3>
 									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
 										سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 item">
-									<img src="image/icon/promo3.png" alt="Save Money" class="img-responsive">
+									<img src="{% static 'image/icon/promo3.png' %}" alt="Save Money" class="img-responsive">
 									<h3>ذخیره پول خود</h3>
 									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
 										سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
@@ -778,7 +778,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p1.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p1.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -832,7 +832,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p4.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p4.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -885,7 +885,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p2.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p2.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -936,7 +936,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p3.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p3.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street, San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -989,7 +989,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p3.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p3.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -1040,7 +1040,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="image/catalog/demo/product/travel/p6.jpg"
+																			<img src="{% static 'image/catalog/demo/product/travel/p6.jpg' %}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -1120,7 +1120,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/chosse1.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/chosse1.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -1150,7 +1150,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/chosse2.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/chosse2.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -1180,7 +1180,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/chosse3.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/chosse3.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -1210,7 +1210,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/chosse4.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/chosse4.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -1240,7 +1240,7 @@
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="image/catalog/demo/product/travel/chosse5.jpg"
+																		<img src="{% static 'image/catalog/demo/product/travel/chosse5.jpg' %}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -1286,61 +1286,61 @@
 							data-loop="yes" data-hoverpause="yes">
 							<div class="item">
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery1.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery1.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery1.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery1.jpg' %}"
 											alt="gallery1"></a>
 								</div>
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery2.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery2.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery2.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery2.jpg' %}"
 											alt="gallery2"></a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery3.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery3.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery3.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery3.jpg' %}"
 											alt="gallery3"></a>
 								</div>
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery4.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery4.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery4.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery4.jpg' %}"
 											alt="gallery4"></a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery5.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery5.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery5.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery5.jpg' %}"
 											alt="gallery5"></a>
 								</div>
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery6.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery6.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery6.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery6.jpg' %}"
 											alt="gallery6"></a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery7.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery7.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery7.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery7.jpg' %}"
 											alt="gallery7"></a>
 								</div>
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery8.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery8.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery8.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery8.jpg' %}"
 											alt="gallery8"></a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery9.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery9.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery9.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery9.jpg' %}"
 											alt="gallery9"></a>
 								</div>
 								<div class="content-img">
-									<a class="image-popup" href="image/catalog/demo/banners/home1/gallery10.jpg"><img
-											class="responsive" src="image/catalog/demo/banners/home1/gallery10.jpg"
+									<a class="image-popup" href="{% static 'image/catalog/demo/banners/home1/gallery10.jpg' %}"><img
+											class="responsive" src="{% static 'image/catalog/demo/banners/home1/gallery10.jpg' %}"
 											alt="gallery10"></a>
 								</div>
 							</div>
@@ -1372,7 +1372,7 @@
 													<div class="item head-button">
 														<div class="content-img">
 															<a href="blog-detail.html" target="_self">
-																<img src="image/catalog/demo/blog/blog1.jpg"
+																<img src="{% static 'image/catalog/demo/blog/blog1.jpg' %}"
 																	alt="لورم ایپسوم متن ساختگی">
 															</a>
 														</div>
@@ -1415,7 +1415,7 @@
 													<div class="item head-button">
 														<div class="content-img">
 															<a href="blog-detail.html" target="_self">
-																<img src="image/catalog/demo/blog/blog2.jpg"
+																<img src="{% static 'image/catalog/demo/blog/blog2.jpg' %}"
 																	alt="لورم ایپسوم متن ساختگی">
 															</a>
 														</div>
@@ -1458,7 +1458,7 @@
 													<div class="item head-button">
 														<div class="content-img">
 															<a href="blog-detail.html" target="_self">
-																<img src="image/catalog/demo/blog/blog3.jpg"
+																<img src="{% static 'image/catalog/demo/blog/blog3.jpg' %}"
 																	alt="لورم ایپسوم متن ساختگی">
 															</a>
 														</div>
@@ -1544,7 +1544,7 @@
 								<div class="row row_hwmc  ">
 									<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col_6ps1 footer--link">
 										<div class="footer-logo">
-											<a href="index-portkey.html"><img src="image/logo/logo-footer.png" alt="Your Store"
+											<a href="index-portkey.html"><img src="{% static 'image/logo/logo-footer.png' %}" alt="Your Store"
 													width="194" height="59" title="آژانس مسافرتی شما"></a>
 										</div>
 										<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
@@ -1650,30 +1650,30 @@
 	<!-- Include Libs & Plugins
 		============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-	<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="js/slick-slider/slick.js"></script>
-	<script type="text/javascript" src="js/themejs/libs.js"></script>
-	<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="js/persian-date-0.1.8.min.js"></script>
-	<script type="text/javascript" src="js/persian-datepicker-0.4.5.min.js"></script>
-	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
-	<script type="text/javascript" src="js/minicolors/jquery.miniColors.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nav.js"></script>
-	<script type="text/javascript" src="js/quickview/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick-slider/slick.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/persian-date-0.1.8.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/persian-datepicker-0.4.5.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/modernizr/modernizr-2.6.2.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/minicolors/jquery.miniColors.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.nav.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/quickview/jquery.magnific-popup.min.js' %}"></script>
 	<!-- Theme files
 		============================================ -->
-	<script type="text/javascript" src="js/themejs/application.js"></script>
-	<script type="text/javascript" src="js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="js/themejs/custom_h1.js"></script>
-	<script type="text/javascript" src="js/themejs/nouislider.js"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/homepage.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/custom_h1.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/themejs/nouislider.js' %}"></script>
 </body>
 
 
