@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+{% load static %}
+<title>{% block title %}{% endblock title %}</title>
+
+<head>
+	<!-- Basic page needs
+	============================================ -->
+	<meta charset="utf-8">
+	<meta name="keywords"
+		content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+	<meta name="description"
+		content="PortKey is a beautiful and creative travel booking HTML template for any travel designs" />
+
+	<!-- Mobile specific metas
+	============================================ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- Favicon
+	============================================ -->
+
+	<!-- Libs CSS
+	============================================ -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+	<link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/persian-datepicker-0.4.5.min.css' %}">
+	<link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+	<link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+	<link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+	<link href="{% static 'js/minicolors/miniColors.css' %}" rel="stylesheet">
+	<!-- Theme CSS
+	============================================ -->
+	<link href="{% static 'css/themecss/so_sociallogin.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so_searchpro.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-category-slider.css' %}" rel="stylesheet">
+	<link href="{% static 'css/themecss/so-newletter-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/footer/footer1.css' %}" rel="stylesheet">
+	<link href="{% static 'css/header/header1.css' %}" rel="stylesheet">
+	<link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+	<link href="{% static 'css/quickview/quickview.css' %}" rel="stylesheet">
+</head>
+
+<body class="common-home res layout-1">
+	<div id="wrapper" class="wrapper-fluid banners-effect-10">
+		<!-- Header Container  -->
+		<header id="header" class=" typeheader-1">
+			<!-- Header Top -->
+			<div class="header-bonus">
+				<div class="container">
+					<ul class="bonus-phone pull-left">
+						<li><i class="fa fa-phone" aria-hidden="true"></i> <a href="#">02155667788</a>
+						</li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> تهران، میدان آزادی، پلاک 7</li>
+					</ul>
+					<ul class="bonus-social pull-left">
+						<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-top hidden-compact">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-xs-3 header-logo pull-left">
+							<div class="navbar-logo">
+								<a href="index-portkey.html"><img src="{% static 'image/catalog/demo/logo/logo.png' %}" alt="Your Store"
+										width="118" height="36" title="آژنس مسافرتی همتا"></a>
+							</div>
+						</div>
+						<div class="book pull-right">
+							<a href="requiry.html">استعلام تور</a>
+						</div>
+						<!-- Menuhome -->
+						<div class="header-menu pull-right">
+							<div class="megamenu-style-dev megamenu-dev">
+								<div class="responsive">
+									<nav class="navbar-default">
+										<div class="container-megamenu horizontal">
+											<div class="navbar-header">
+												<button type="button" id="show-megamenu" data-toggle="collapse"
+													class="navbar-toggle">
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+											</div>
+											<div class="megamenu-wrapper">
+												<span id="remove-megamenu" class="fa fa-times"></span>
+												<div class="megamenu-pattern">
+													<div class="container">
+														<ul class="megamenu" data-transition="slide"
+															data-animationtime="500">
+															<li class="menu-home with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a href="#" class="clearfix">
+																	<strong>
+																		خانه
+																	</strong>
+																</a>
+																<div class="sub-menu" style="width: 40%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="index-portkey.html">خانه 1</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="home2.html">خانه 2</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="home3.html">خانه 3</a>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="style-page with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a class="clearfix">
+																	<strong>
+																		تور
+																	</strong>
+																	<span class="labelwordpress"></span>
+																</a>
+																<div class="sub-menu" style="width: 40%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="tour.html">لیست تور
+																							ها</a></li>
+																					<li><a class="subcategory_item"
+																							href="tour.html">شبکه بندی
+																							تور ها</a></li>
+																					<li><a class="subcategory_item"
+																							href="tour-detail.html">جزئیات
+																							تور</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="style-page with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a class="clearfix">
+																	<strong>
+																		مقصد
+																	</strong>
+																	<span class="labelNew"></span>
+																</a>
+																<div class="sub-menu" style="width: 90%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-6">
+																				<h3>مقصدهای برتر</h3>
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="destination-detail.html">ویتنام</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="destination-detail.html">نیوزلند</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="destination-detail.html">آمریکا</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="destination-detail.html">ایسلند</a>
+																					</li>
+																				</ul>
+																			</div>
+																			<div class="col-md-6">
+																				<h3>لایه های مقصد</h3>
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="destination-list.html">لیست
+																							مقصد ها</a></li>
+																					<li><a class="subcategory_item"
+																							href="destination-detail.html">جزئیات
+																							مقصد</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="style-page with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a class="clearfix">
+																	<strong>
+																		سبک سفر
+																	</strong>
+																</a>
+																<div class="sub-menu" style="width: 40%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="#">ماجراجویی</a></li>
+																					<li><a class="subcategory_item"
+																							href="#">رو تعطیل</a></li>
+																					<li><a class="subcategory_item"
+																							href="#">تور فامیلی</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="#">سفر ارزان</a></li>
+																					<li><a class="subcategory_item"
+																							href="#">تور آزاد</a></li>
+																					<li><a class="subcategory_item"
+																							href="#">تاریخی</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="style-page with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a href="#" class="clearfix">
+																	<strong>
+																		اخبار
+																	</strong>
+																</a>
+																<div class="sub-menu" style="width: 40%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="blog-grid.html">شبکه
+																							بندی اخبار</a></li>
+																					<li><a class="subcategory_item"
+																							href="blog-list.html">لیست
+																							اخبار</a></li>
+																					<li><a class="subcategory_item"
+																							href="blog-sidebar.html">اخبار
+																							با سایدبار</a></li>
+																					<li><a class="subcategory_item"
+																							href="blog-detail.html">جزئیات
+																							خبر</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="style-page with-sub-menu hover">
+																<p class="close-menu"></p>
+																<a class="clearfix">
+																	<strong>
+																		صفحات
+																	</strong>
+																</a>
+																<div class="sub-menu" style="width: 40%;">
+																	<div class="content">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<ul class="row-list">
+																					<li><a class="subcategory_item"
+																							href="about-us.html">درباره
+																							ما</a></li>
+																					<li><a class="subcategory_item"
+																							href="contact-us-v1.html">تماس
+																							با ما</a></li>
+																					<li><a class="subcategory_item"
+																							href="contact-us-v2.html">تماس
+																							با ما 2</a></li>
+																					<li><a class="subcategory_item"
+																							href="404.html">خطای 404</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="gallery.html">گالری</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="maintain.html">به
+																							زودی</a>
+																					</li>
+																					<li><a class="subcategory_item"
+																							href="faq.html">سوالات
+																							متداول</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //Header Top -->
+		</header>
+		<!-- //Header Container  -->
+{% block content %}
+  
+{% endblock content %}
+<!-- Footer Container -->
+<footer class="footer-container typefooter-1">
+    <div class="footer-has-toggle" id="collapse-footer">
+        <div class="so-page-builder">
+            <div class="container-fluid page-builder-ltr">
+                <div class="row row_mvtd footer--center2 row-color ">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col_6fdl float_none container">
+                        <div class="row row_hwmc  ">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col_6ps1 footer--link">
+                                <div class="footer-logo">
+                                    <a href="index-portkey.html"><img src="{% static 'image/logo/logo-footer.png' %}" alt="Your Store"
+                                            width="194" height="59" title="آژانس مسافرتی همتا"></a>
+                                </div>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
+                                    سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ...</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col_6ps1 footer--link">
+                                <h3 class="title-footer">
+                                    آدرس
+                                </h3>
+                                <ul class="about-list">
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i><span
+                                            class="ab-pd">تهران، میدان آزادی، خیابان آزادی، پلاک 7</span></li>
+                                    <li class="call-mail"><i class="fa fa-paper-plane" aria-hidden="true"></i><a
+                                            class="ab-pd"
+                                            href="mailto:contact@example.com">contact@example.com</a></li>
+                                    <li class="call-phone"><i class="fa fa-mobile" aria-hidden="true"></i><a
+                                            class="ab-pd" href="#">02155667788</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col_6ps1 footer--link">
+                                <h3 class="title-footer">
+                                    لینک های مفید
+                                </h3>
+                                <ul class="links">
+                                    <li>
+                                        <a href="index-portkey.html">خانه</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">فروشگاه</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">قوانین و مقررات</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">نظرات و دیدگاه ها</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">آخرین مقررات</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col_6ps1 footer--link">
+                                <h3 class="title-footer">
+                                    ارتباط با ما
+                                </h3>
+                                <ul class="links">
+                                    <li>
+                                        <a href="about-us.html">درباره ما</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us-v1.html">تماس با ما</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-toggle hidden-lg hidden-md">
+        <a class="showmore collapsed" data-toggle="collapse" href="#collapse-footer" aria-expanded="false"
+            aria-controls="collapse-footer">
+            <span class="toggle-more"><i class="fa fa-angle-double-down"></i>نمایش بیشتر</span>
+            <span class="toggle-less"><i class="fa fa-angle-double-up"></i>نمایش کمتر</span>
+        </a>
+    </div>
+    <div class="footer-bottom ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 copyright">
+                    Copyright © 2020، تمام حقوق محفوظ است <a href="#""></a>
+                </div>
+                <div class=" col-md-6 col-sm-6 social">
+                        <h3>دنبال کردن ما</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/example" title="فیسبوک"><span
+                                        class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/example" title="توییتر"><span
+                                        class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://www.pinterest.com/example/" title="پینترست"><span
+                                        class="fa fa-pinterest"></span></a></li>
+                            <li><a href="#" title="اینستاگرام"><span class="fa fa-instagram"></span></a></li>
+                            <li><a href="https://plus.google.com/example" title="گوگل پلاس"><span
+                                        class="fa fa-google-plus"></span></a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //end Footer Container -->
+</div>
+<div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+<!-- End Color Scheme
+============================================ -->
+<!-- Include Libs & Plugins
+============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick-slider/slick.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/persian-date-0.1.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/persian-datepicker-0.4.5.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/modernizr-2.6.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/minicolors/jquery.miniColors.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.nav.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/quickview/jquery.magnific-popup.min.js' %}"></script>
+<!-- Theme files
+============================================ -->
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/homepage.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/custom_h1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/nouislider.js' %}"></script>
+</body>
+</html>
