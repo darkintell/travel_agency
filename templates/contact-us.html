@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}تماس با ما{% endblock title %}
+{% block content %}
+		<!-- Main Container  -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="title-breadcrumb">
+					تماس با ما
+				</div>
+				<ul class="breadcrumb-cate">
+					<li><a href="index-portkey.html">خانه</a></li>
+					<li><a href="#">صفحات</a></li>
+					<li><a href="contact-us-v1.html">تماس با ما ورژن 2</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="contact_us_v2">
+			<div class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0762034011345!2d51.33938432078328!3d35.69974233666176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzU5LjEiTiA1McKwMjAnMTMuOSJF!5e0!3m2!1sfa!2s!4v1585894944267!5m2!1sfa!2s"
+					width="1920" height="600" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+			</div>
+			<div class="contact-bot clearfix">
+				<form action="#" method="post" enctype="multipart/form-data" class="form-contact pull-left">
+					<h3>ارسال دیدگاه</h3>
+					<p>با ما در ارتباط باشید</p>
+					<div class="form-group required">
+						<input type="text" name="name" value="" id="input-name" class="form-control"
+							placeholder="نام شما">
+					</div>
+					<div class="form-group required">
+						<input type="text" name="email" value="" id="input-email" class="form-control"
+							placeholder="ایمیل شما">
+					</div>
+					<div class="form-group required">
+						<input type="text" name="email" value="" id="input-phone" class="form-control"
+							placeholder="شماره تماس شما">
+					</div>
+					<div class="form-group required">
+						<textarea name="enquiry" rows="8" id="input-enquiry" placeholder="دیدگاه شما"
+							class="form-control"></textarea>
+					</div>
+					<div class="buttons">
+						<button class="btn btn-info" type="submit">ارسال دیدگاه</button>
+					</div>
+				</form>
+				<div class="contact-right pull-left">
+					<h3>اطلاعات تماس</h3>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
+					<ul class="add">
+						<li>
+							<span>آدرس</span>
+							<label>تهران، میدان آزادی، خیابان آزادی، ساختمان گلبرگ، پلاک 77</label>
+						</li>
+						<li>
+							<span>شماره تماس</span>
+							<label>02155667788</label>
+						</li>
+						<li>
+							<span>ایمیل</span>
+							<label>example@contact.com</label>
+						</li>
+					</ul>
+					<ul class="social">
+						<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //Main Container -->
+{% endblock content %}

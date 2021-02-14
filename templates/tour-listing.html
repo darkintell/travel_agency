@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  همه تور ها
+{% endblock title %}
+{% block content %}
+		<!-- Main Container  -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="title-breadcrumb">
+					تور
+				</div>
+				<ul class="breadcrumb-cate">
+					<li><a href="index-portkey.html">خانه</a></li>
+					<li><a href="#">تور</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container product-detail">
+			<div class="row">
+				<aside class="col-md-3 col-sm-4 col-xs-12 content-aside left_column sidebar-offcanvas">
+					<span id="close-sidebar" class="fa fa-times"></span>
+					<div class="module-search clearfix">
+						<h3 class="modtitle">جستجوی تور</h3>
+						<form method="get" class="search-pr">
+							<div class="search-item city">
+								<input type="text" class="tour-search-input" id="city" placeholder="مقصد شما">
+							</div>
+							<div class="search-item date">
+								<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
+									id="date_from" placeholder="تاریخ شروع">
+							</div>
+							<div class="search-item date">
+								<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
+									id="date_to" placeholder="تاریخ پایان">
+							</div>
+							<div class="search-item item-select">
+								<select name="people">
+									<option value="1">تعداد</option>
+									<option value="2">2 نفر</option>
+									<option value="3">3 نفر</option>
+									<option value="4">4 نفر</option>
+								</select>
+							</div>
+							<div class="search-item item-budget">
+								<input type="number" class="hotel-budget-input" id="budget" placeholder="حداکثر بودجه">
+							</div>
+							<div class="button-submit">
+								<button type="submit" class="button">جستجوی تور <i class="fa fa-angle-left"
+										aria-hidden="true"></i></button>
+								<input type="hidden" name="s">
+								<input type="hidden" name="search_tour" value="1">
+							</div>
+						</form>
+					</div>
+					<div class="module-travel clearfix">
+						<h3>سبک سفر</h3>
+						<ul>
+							<li class="active"><a href="#"><span>روز تعطیل</span><label>15</label></a></li>
+							<li><a href="#"><span>ماجراجویی</span><label>20</label></a></li>
+							<li><a href="#"><span>تور خانوادگی</span><label>5</label></a></li>
+							<li><a href="#"><span>تور ارزان</span><label>30</label></a></li>
+							<li><a href="#"><span>تور آزاد</span><label>18</label></a></li>
+							<li><a href="#"><span>تور کلاسیک</span><label>6</label></a></li>
+						</ul>
+					</div>
+					<div class="module-rate clearfix">
+						<h3>رتبه ستاره ای</h3>
+						<ul>
+							<li class="active"><a href="#">
+									<div class="star"><span style="width: 75px"></span></div><label>15</label>
+								</a></li>
+							<li><a href="#">
+									<div class="star"><span style="width: 60px"></span></div><label>35</label>
+								</a></li>
+							<li><a href="#">
+									<div class="star"><span style="width: 45px"></span></div><label>20</label>
+								</a></li>
+							<li><a href="#">
+									<div class="star"><span style="width: 30px"></span></div><label>8</label>
+								</a></li>
+							<li><a href="#">
+									<div class="star"><span style="width: 15px"></span></div><label>4</label>
+								</a></li>
+						</ul>
+					</div>
+					<div class="module-ques clearfix">
+						<h3>سوالی دارید؟</h3>
+						<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+							لورم ایپسوم متن ساختگی</p>
+						<ul>
+							<li><i class="fa fa-phone" aria-hidden="true"></i>02155667788</li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i>example@gmail.com</li>
+						</ul>
+					</div>
+				</aside>
+				<div id="content" class="col-md-9 col-sm-12 col-xs-12">
+					<a href="javascript:void(0)" class="open-sidebar hidden-lg hidden-md"><i
+							class="fa fa-bars"></i>سایدبار</a>
+					<div class="products-category">
+						<div class="product-filter filters-panel">
+							<div class="row">
+								<div class="col-md-2 col-sm-2 view-mode hidden-xs">
+									<div class="list-view">
+										<button class="btn btn-default grid active" data-view="grid"
+											data-toggle="tooltip" data-original-title="شبکه بندی"><i
+												class="fa fa-th-large"></i></button>
+										<button class="btn btn-default list" data-view="list" data-toggle="tooltip"
+											data-original-title="لیست"><i class="fa fa-th-list"></i></button>
+									</div>
+								</div>
+								<div class="short-by-show form-inline col-md-10 col-sm-10">
+									<div class="form-group">
+										<label class="control-label" for="input-limit">نمایش 1-6 از 8 نتیجه</label>
+									</div>
+									<div class="form-group short-by">
+										<select id="input-sort" class="form-control" onchange="location = this.value;">
+											<option value="" selected="selected">مرتب سازی بر اساس</option>
+											<option value="">نام ( الف - ی)</option>
+											<option value="">نام ( ی - الف)</option>
+											<option value="">قیمت ( کم - زیاد)</option>
+											<option value="">قیمت ( زیاد - کم)</option>
+											<option value="">رتبه ( بالاترین )</option>
+											<option value="">رتبه ( پایین ترین )</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-style4 products-list grid row number-col-3 so-filter-gird">
+
+							<div class="product-layout col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="product-item-container item">
+									<div class="item-block so-quickview">
+										<div class="image">
+											<a href="tour-detail.html" target="_self">
+												<img src=" {% static 'image/catalog/demo/product/travel/p1.jpg' %}"
+													alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
+													class="img-responsive">
+											</a>
+											<span class="label-hot"><i class="fa fa-fire" aria-hidden="true"></i>تور
+												ویژه</span>
+											<span class="label-rate style2"><i class="fa fa-star"
+													aria-hidden="true"></i>رتبه بالا</span>
+										</div>
+										<div class="item-content clearfix">
+											<h3><a href="tour-detail.html">تور ویژه 2 روز و 1 شب سفر به جزایر قناری</a>
+											</h3>
+											<div class="reviews-content">
+												<div class="star">
+													<span style="width: 60px"></span>
+												</div>
+												<a href="#" class="review-link" rel="nofollow">(15 رأی)</a>
+											</div>
+											<ul>
+												<li><i class="fa fa-map-marker" aria-hidden="true"></i> نیوزلند</li>
+												<li><i class="fa fa-clock-o" aria-hidden="true"></i> 2 روز</li>
+												<li><i class="fa fa-user-circle" aria-hidden="true"></i> 4 نفر</li>
+											</ul>
+											<div class="des">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم
+												متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی ...</div>
+											<div class="item-bot clearfix">
+												<div class="price pull-left">
+													از <label>230,000</label><span> تومان</span>
+												</div>
+												<a href="{% url 'reserve' %}"
+													class="book-now btn-quickview quickview quickview_handler pull-right"
+													title="مشاهده سریع" data-title="مشاهده سریع"
+													data-fancybox-type="iframe">مشاهده تور</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="product-filter product-filter-bottom filters-panel">
+							<ul class="pagination">
+								<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+								<li class="active"><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Main Container -->
+{% endblock content %}

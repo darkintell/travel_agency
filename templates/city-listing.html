@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  لیست شهر ها
+{% endblock title %}
+{% block content %}
+  
+		<!-- Main Container  -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="title-breadcrumb">
+					لیست شهر ها
+				</div>
+				<ul class="breadcrumb-cate">
+					<li><a href="index-portkey.html">خانه</a></li>
+					<li><a href="#">مقصد</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="destination-list">
+			<section class="destination-chose">
+				<div class="container">
+					<div class="row">
+
+						<div class="item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="transition product-layout">
+								<div class="product-item-container ">
+									<div class="item-block so-quickview">
+										<div class="image">
+											<a href="destination-detail.html" target="_self">
+												<img src=" {% static 'image/catalog/demo/product/travel/chosse1.jpg' %}"
+													alt="توکیو، سانفرانسیسکو، لندن، پاریس" class="img-responsive">
+											</a>
+										</div>
+										<div class="item-content">
+											<div class="item-title clearfix">
+												<h3 class="pull-left"><a href="destination-detail.html"><i
+															class="fa fa-map-marker" aria-hidden="true"></i>
+														انگلستان</a>
+												</h3>
+												<span class="pull-right">14 تور</span>
+											</div>
+											<div class="view-all"><a href="#">مشاهده همه تور ها <i
+														class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<ul class="pagination">
+							<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+							<li class="active"><span>1</span></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-style4 destination-tour">
+				<div class="image">
+					<img src="{% static 'image/bg-destination.jpg' %}" alt="" class="img-responsive">
+				</div>
+				<div class="container page-builder-ltr">
+					<div class="module so-deals-1tr so-deals">
+						<div class="head-title clearfix">
+							<div class="block-title pull-left">
+								<h3><span>تور های محبوب</span></h3>
+							</div>
+						</div>
+						<div class="modcontent">
+							<div
+								class="so-deal modcontent products-list grid clearfix clearfix preset00-3 preset01-3 preset02-2 preset03-2 preset04-1  button-type1  style2">
+								<div class="category-slider-inner products-list yt-content-slider" data-rtl="yes"
+									data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6"
+									data-margin="30" data-items_column00="3" data-items_column0="3"
+									data-items_column1="3" data-items_column2="2" data-items_column3="2"
+									data-items_column4="1" data-arrows="no" data-pagination="no" data-lazyload="yes"
+									data-loop="yes" data-hoverpause="yes">
+
+									<div class="item">
+										<div class="item-inner">
+											<div class="transition product-layout">
+												<div class="product-item-container ">
+													<div class="item-block so-quickview">
+														<div class="image">
+															<a href="destination-detail.html" target="_self">
+																<img src="{% static 'image/catalog/demo/product/travel/p1.jpg' %}"
+																	alt="توکیو، سانفرانسیسکو، لندن، پاریس"
+																	class="img-responsive">
+															</a>
+															<span class="label-hot"><i class="fa fa-fire"
+																	aria-hidden="true"></i>تور ویژه</span>
+															<span class="label-rate style2"><i class="fa fa-star"
+																	aria-hidden="true"></i>رتبه بالا</span>
+														</div>
+														<div class="item-content clearfix">
+															<h3><a href="tour-detail.html">2 روز و 1 شب سفر به
+																	سانتورینی، یونان</a></h3>
+															<div class="reviews-content">
+																<div class="star">
+																	<span style="width: 60px"></span>
+																</div>
+																<a href="#" class="review-link" rel="nofollow">(15
+																	رأی)</a>
+															</div>
+															<ul>
+																<li><i class="fa fa-map-marker" aria-hidden="true"></i>
+																	نیوزلند</li>
+																<li><i class="fa fa-clock-o" aria-hidden="true"></i> 2
+																	روز</li>
+																<li><i class="fa fa-user-circle" aria-hidden="true"></i>
+																	4 نفر</li>
+															</ul>
+															<div class="item-bot clearfix">
+																<div class="price pull-left">
+																	از <label>230,000</label><span> تومان</span>
+																</div>
+																<a href="#" class="book-now pull-right">مشاهده تور</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+		<!-- //Main Container -->
+		{% endblock content %}
+
