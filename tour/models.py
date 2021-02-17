@@ -19,7 +19,10 @@ class CityModel(models.Model):
     currency = models.CharField(max_length=30, verbose_name= "ارز رایج")
     language = models.CharField(max_length=30, verbose_name= "زبان")
     religion = models.CharField(max_length=30, verbose_name= "دین")
-    description_content = FroalaField(verbose_name="توضیحات کامل")
+    description_content = FroalaField(verbose_name="توضیحات کامل",options={
+        'imageUploadPATH': '/media/cities',
+        'filesManagerUploadURL':'/media/cities/'
+        })
 
 
     class Meta:
@@ -34,14 +37,8 @@ class CityModel(models.Model):
         return self.name
 
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name_en)
-        super(CityModel, self).save(*args, **kwargs)
-
-
 def ImagePath(instance, filename):
-    return ('/'.join(['tours',instance.city.slug(), filename]))
+    return ('/'.join(['tours',instance.city.slug, filename]))
     
 class TourModel(models.Model):
     title = models.CharField(max_length=50, verbose_name="عنوان")
@@ -78,7 +75,3 @@ class TourModel(models.Model):
     def __str__(self):
         return self.title
     
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title_en)
-        super(TourModel, self).save(*args, **kwargs)

@@ -14,5 +14,11 @@ def home(request):
 def tour_detail(request, slug):
     context = {}
     context['tour'] = get_object_or_404(TourModel, slug=slug)
+    context['tours'] = TourModel.objects.filter(is_active=True).order_by('-score')
     return render(request, 'tour-detail.html',context)
 
+def city_detail(request, slug):
+    context = {}
+    context['city'] = get_object_or_404(CityModel, slug=slug)
+    context['tours'] = TourModel.objects.filter(is_active=True).order_by('-score')
+    return render(request, 'city-detail.html',context)

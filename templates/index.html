@@ -219,7 +219,7 @@
 															<div class="product-item-container ">
 																<div class="item-block so-quickview">
 																	<div class="image">
-																		<a href="tour-detail.html" target="_self">
+																		<a href="{% url 'tour-detail' tour.slug %}" target="_self">
 																			<img src="{{ tour.thumbnail.url }}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
@@ -228,13 +228,11 @@
 																				aria-hidden="true"></i>تور ویژه</span>
 																	</div>
 																	<div class="item-content clearfix">
-																		<h3><a href="tour-detail.html">{{tour.title}}</a></h3>
+																		<h3><a href="{% url 'tour-detail' tour.slug %}">{{tour.title}}</a></h3>
 																		<div class="reviews-content">
 																			<div class="star">
 																				<span style="width: 60px"></span>
 																			</div>
-																			<a href="#" class="review-link"
-																				rel="nofollow">(20 بررسی)</a>
 																		</div>
 																		<ul>
 																			<li><i class="fa fa-map-marker"
@@ -299,7 +297,7 @@
 														<div class="product-item-container ">
 															<div class="item-block so-quickview">
 																<div class="image">
-																	<a href="destination-detail.html" target="_self">
+																	<a href="{% url 'city-detail' city.slug %}" target="_self">
 																		<img src="{{city.thumbnail.url}}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
@@ -308,14 +306,14 @@
 																<div class="item-content">
 																	<div class="item-title clearfix">
 																		<h3 class="pull-left"><a
-																				href="destination-detail.html"><i
+																				href="{% url 'city-detail' city.slug %}"><i
 																					class="fa fa-map-marker"
 																					aria-hidden="true"></i> {{city.name}}</a>
 																		</h3>
 																		<span class="pull-right">{{city.tour_number}} تور</span>
 																	</div>
 																	<div class="view-all"><a
-																			href="destination-list.html">مشاهده همه تور
+																			href="{% url 'city-detail' city.slug %}">مشاهده همه تور
 																			ها
 																			<i class="fa fa-angle-double-left"
 																				aria-hidden="true"></i></a></div>
