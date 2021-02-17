@@ -132,7 +132,7 @@
 														<div class="product-item-container ">
 															<div class="item-block so-quickview">
 																<div class="image">
-																	<a href="tour-detail.html" target="_self">
+																	<a href="{% url 'tour-detail' tour.slug %}" target="_self">
 																		<img src="{{tour.thumbnail.url}}"
 																			class="img-responsive">
 																	</a>
@@ -141,7 +141,7 @@
 																			aria-hidden="true"></i></span>
 																</div>
 																<div class="item-content">
-																	<h3><a href="tour-detail.html">{{tour.title}}</a></h3>
+																	<h3><a href="{% url 'tour-detail' tour.slug %}">{{tour.title}}</a></h3>
 																	<div class="reviews-content">
 																		<div class="star">
 																			<span style="width: 60px"></span>

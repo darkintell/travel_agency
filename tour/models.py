@@ -9,6 +9,7 @@ from django.db import models
 class CityModel(models.Model):
     name = models.CharField(max_length=50, verbose_name= "نام‌شهر")
     thumbnail = models.ImageField(upload_to='cities', verbose_name='تصویر بندانگشتی', null=True)
+    slug = models.SlugField(max_length=255, unique=True)
     name_en = models.CharField(max_length=50, verbose_name= "نام‌شهر-انگلیسی", default='')
     image = models.ImageField(upload_to='cities', verbose_name= "تصویر")
     country = models.CharField(max_length=100, verbose_name= "کشور")
@@ -29,12 +30,14 @@ class CityModel(models.Model):
         tours = TourModel.objects.filter(is_active=True).filter(city__name=self.name).count()
         return tours
     
-    def slug(self):
-        
-        return slugify(self.name_en)
-  
     def __str__(self):
         return self.name
+
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name_en)
+        super(CityModel, self).save(*args, **kwargs)
 
 
 def ImagePath(instance, filename):
@@ -43,6 +46,7 @@ def ImagePath(instance, filename):
 class TourModel(models.Model):
     title = models.CharField(max_length=50, verbose_name="عنوان")
     title_en = models.CharField(max_length=50, verbose_name="عنوان-انگلیسی", default='')
+    slug = models.SlugField(max_length=255, unique=True)
     image = models.ImageField(upload_to=ImagePath, verbose_name="تصویر")
     thumbnail = models.ImageField(upload_to=ImagePath, verbose_name='تصویر بندانگشتی', null=True)
     city = models.ForeignKey('CityModel',on_delete=models.CASCADE, verbose_name="شهر")
@@ -71,9 +75,10 @@ class TourModel(models.Model):
         verbose_name_plural = "تور های گردشگری"
         ordering = ["-start_date"]
     
-    def slug(self):
-        return slugify(self.title_en)
-    
     def __str__(self):
         return self.title
     
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title_en)
+        super(TourModel, self).save(*args, **kwargs)
