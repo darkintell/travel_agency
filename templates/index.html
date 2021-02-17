@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 {% block title %}آژانس مسافرتی همتا{% endblock title %}
 {% block content %}
 		<!-- Main Container  -->
@@ -124,24 +125,23 @@
 												data-items_column3="2" data-items_column4="1" data-arrows="no"
 												data-pagination="no" data-lazyload="yes" data-loop="yes"
 												data-hoverpause="yes">
-
+												  
+												{% for tour in random_tours %}
 												<div class="item">
 													<div class="transition product-layout">
 														<div class="product-item-container ">
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="tour-detail.html" target="_self">
-																		<img src="{% static 'image/catalog/demo/product/travel/t1.jpg' %}"
-																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
+																		<img src="{{tour.thumbnail.url}}"
 																			class="img-responsive">
 																	</a>
-																	<span class="price">230 هزار تومان</span>
+																	<span class="price">{{tour.adult_price|intcomma}} تومان</span>
 																	<span class="label-bolt"><i class="fa fa-bolt"
 																			aria-hidden="true"></i></span>
 																</div>
 																<div class="item-content">
-																	<h3><a href="tour-detail.html">2 روز و 1 شب سفر به
-																			سانتیرونی، یونان</a></h3>
+																	<h3><a href="tour-detail.html">{{tour.title}}</a></h3>
 																	<div class="reviews-content">
 																		<div class="star">
 																			<span style="width: 60px"></span>
@@ -149,18 +149,16 @@
 																	</div>
 																	<ul>
 																		<li><i class="fa fa-map-marker"
-																				aria-hidden="true"></i> نیوزلند</li>
+																				aria-hidden="true"></i> {{tour.city.name}}</li>
 																		<li><i class="fa fa-clock-o"
-																				aria-hidden="true"></i> 2 روز</li>
-																		<li><i class="fa fa-user-circle"
-																				aria-hidden="true"></i> 4 نفر</li>
+																				aria-hidden="true"></i> {{tour.tour_duration}}</li>
 																	</ul>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-												
+												{% endfor %}
 											</div>
 										</div>
 									</div>
@@ -214,7 +212,7 @@
 												data-items_column3="2" data-items_column4="1" data-arrows="no"
 												data-pagination="no" data-lazyload="yes" data-loop="yes"
 												data-hoverpause="yes">
-
+												{% for tour in top_tours %}
 												<div class="item">
 													<div class="item-inner">
 														<div class="transition product-layout">
@@ -222,7 +220,7 @@
 																<div class="item-block so-quickview">
 																	<div class="image">
 																		<a href="tour-detail.html" target="_self">
-																			<img src="{% static 'image/catalog/demo/product/travel/p4.jpg' %}"
+																			<img src="{{ tour.thumbnail.url }}"
 																				alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																				class="img-responsive">
 																		</a>
@@ -230,8 +228,7 @@
 																				aria-hidden="true"></i>تور ویژه</span>
 																	</div>
 																	<div class="item-content clearfix">
-																		<h3><a href="tour-detail.html">2 روز و یک شب سفر
-																				به سانتورینی، یونان</a></h3>
+																		<h3><a href="tour-detail.html">{{tour.title}}</a></h3>
 																		<div class="reviews-content">
 																			<div class="star">
 																				<span style="width: 60px"></span>
@@ -241,18 +238,15 @@
 																		</div>
 																		<ul>
 																			<li><i class="fa fa-map-marker"
-																					aria-hidden="true"></i> نیوزلند
+																					aria-hidden="true"></i> {{tour.city.name}}
 																			</li>
 																			<li><i class="fa fa-clock-o"
-																					aria-hidden="true"></i> 2 روز</li>
-																			<li><i class="fa fa-user-circle"
-																					aria-hidden="true"></i> 4 نفر
-																			</li>
+																					aria-hidden="true"></i> {{tour.tour_duration}}</li>
 																		</ul>
 																		<div class="item-bot clearfix">
 																			<div class="price pull-left">
 																				از
-																				<label>230,000</label><span>
+																				<label>{{tour.adult_price|intcomma}}</label><span>
 																					تومان</span>
 																			</div>
 																			<a href="booking-step.html"
@@ -268,7 +262,7 @@
 														</div>
 													</div>
 												</div>
-
+												{% endfor %}
 											</div>
 										</div>
 									</div>
@@ -297,14 +291,16 @@
 												data-items_column3="2" data-items_column4="1" data-arrows="no"
 												data-pagination="no" data-lazyload="yes" data-loop="yes"
 												data-hoverpause="yes">
-
+												{% for city in cities %}
+												  
+												
 												<div class="item">
 													<div class="transition product-layout">
 														<div class="product-item-container ">
 															<div class="item-block so-quickview">
 																<div class="image">
 																	<a href="destination-detail.html" target="_self">
-																		<img src="{% static 'image/catalog/demo/product/travel/chosse1.jpg' %}"
+																		<img src="{{city.thumbnail.url}}"
 																			alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
 																			class="img-responsive">
 																	</a>
@@ -314,9 +310,9 @@
 																		<h3 class="pull-left"><a
 																				href="destination-detail.html"><i
 																					class="fa fa-map-marker"
-																					aria-hidden="true"></i> انگلستان</a>
+																					aria-hidden="true"></i> {{city.name}}</a>
 																		</h3>
-																		<span class="pull-right">14 تور</span>
+																		<span class="pull-right">{{city.tour_number}} تور</span>
 																	</div>
 																	<div class="view-all"><a
 																			href="destination-list.html">مشاهده همه تور
@@ -328,7 +324,7 @@
 														</div>
 													</div>
 												</div>
-
+												{% endfor %}
 											</div>
 										</div>
 									</div>

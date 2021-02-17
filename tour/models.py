@@ -8,6 +8,7 @@ from django.db import models
 
 class CityModel(models.Model):
     name = models.CharField(max_length=50, verbose_name= "نام‌شهر")
+    thumbnail = models.ImageField(upload_to='cities', verbose_name='تصویر بندانگشتی', null=True)
     name_en = models.CharField(max_length=50, verbose_name= "نام‌شهر-انگلیسی", default='')
     image = models.ImageField(upload_to='cities', verbose_name= "تصویر")
     country = models.CharField(max_length=100, verbose_name= "کشور")
@@ -24,8 +25,12 @@ class CityModel(models.Model):
         verbose_name = "شهر"
         verbose_name_plural = "شهر ها"
         
+    def tour_number(self):
+        tours = TourModel.objects.filter(is_active=True).filter(city__name=self.name).count()
+        return tours
     
     def slug(self):
+        
         return slugify(self.name_en)
   
     def __str__(self):
@@ -39,6 +44,7 @@ class TourModel(models.Model):
     title = models.CharField(max_length=50, verbose_name="عنوان")
     title_en = models.CharField(max_length=50, verbose_name="عنوان-انگلیسی", default='')
     image = models.ImageField(upload_to=ImagePath, verbose_name="تصویر")
+    thumbnail = models.ImageField(upload_to=ImagePath, verbose_name='تصویر بندانگشتی', null=True)
     city = models.ForeignKey('CityModel',on_delete=models.CASCADE, verbose_name="شهر")
     label = models.CharField(max_length=20, verbose_name="برچسب")
     description = models.TextField(verbose_name="توضیحات")
