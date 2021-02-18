@@ -69,12 +69,9 @@
 					<div class="row">
 						<div class="col-lg-3 col-xs-3 header-logo pull-left">
 							<div class="navbar-logo">
-								<a href="index-portkey.html"><img src="{% static 'image/catalog/demo/logo/logo.png' %}" alt="Your Store"
+								<a href="{% url 'home' %}"><img src="{% static 'image/catalog/demo/logo/logo.png' %}" alt="Your Store"
 										width="118" height="36" title="آژنس مسافرتی همتا"></a>
 							</div>
-						</div>
-						<div class="book pull-right">
-							<a href="requiry.html">استعلام تور</a>
 						</div>
 						<!-- Menuhome -->
 						<div class="header-menu pull-right">
@@ -96,7 +93,11 @@
 													<div class="container">
 														<ul class="megamenu" data-transition="slide"
 															data-animationtime="500">
-															<li class="menu-home with-sub-menu hover">
+															<li class="{% if 'home' in request.resolver_match.url_name %}
+															menu-home
+															{% else %}
+															style-page
+															{% endif %} hover">
 																<p class="close-menu"></p>
 																<a href="{% url 'home' %}" class="clearfix">
 																	<strong>
@@ -104,177 +105,43 @@
 																	</strong>
 																</a>																
 															</li>
-															<li class="style-page with-sub-menu hover">
+															<li class="{% if 'tour-listing' in request.resolver_match.url_name %}
+															menu-home
+															{% else %}
+															style-page
+															{% endif %} hover">
 																<p class="close-menu"></p>
-																<a class="clearfix">
+																<a class="clearfix" href="{% url 'tour-listing' %}">
 																	<strong>
-																		تور
+																		تورها
 																	</strong>
 																	<span class="labelwordpress"></span>
 																</a>
-																<div class="sub-menu" style="width: 40%;">
-																	<div class="content">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="tour.html">لیست تور
-																							ها</a></li>
-																					<li><a class="subcategory_item"
-																							href="tour.html">شبکه بندی
-																							تور ها</a></li>
-																					<li><a class="subcategory_item"
-																							href="tour-detail.html">جزئیات
-																							تور</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
 															</li>
-															<li class="style-page with-sub-menu hover">
+															<li class="{% if 'city-listing' in request.resolver_match.url_name %}
+															menu-home
+															{% else %}
+															style-page
+															{% endif %} hover">
 																<p class="close-menu"></p>
-																<a class="clearfix">
+																<a class="clearfix" href="{% url 'city-listing' %}">
 																	<strong>
-																		مقصد
+																		شهر ها 
 																	</strong>
 																	<span class="labelNew"></span>
 																</a>
-																<div class="sub-menu" style="width: 90%;">
-																	<div class="content">
-																		<div class="row">
-																			<div class="col-md-6">
-																				<h3>مقصدهای برتر</h3>
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="destination-detail.html">ویتنام</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="destination-detail.html">نیوزلند</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="destination-detail.html">آمریکا</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="destination-detail.html">ایسلند</a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="col-md-6">
-																				<h3>لایه های مقصد</h3>
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="destination-list.html">لیست
-																							مقصد ها</a></li>
-																					<li><a class="subcategory_item"
-																							href="destination-detail.html">جزئیات
-																							مقصد</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
 															</li>
-															<li class="style-page with-sub-menu hover">
+															<li class="{% if 'about' in request.resolver_match.url_name %}
+															menu-home
+															{% else %}
+															style-page
+															{% endif %} hover">
 																<p class="close-menu"></p>
 																<a class="clearfix">
 																	<strong>
-																		سبک سفر
+																		درباره ما
 																	</strong>
 																</a>
-																<div class="sub-menu" style="width: 40%;">
-																	<div class="content">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="#">ماجراجویی</a></li>
-																					<li><a class="subcategory_item"
-																							href="#">رو تعطیل</a></li>
-																					<li><a class="subcategory_item"
-																							href="#">تور فامیلی</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="#">سفر ارزان</a></li>
-																					<li><a class="subcategory_item"
-																							href="#">تور آزاد</a></li>
-																					<li><a class="subcategory_item"
-																							href="#">تاریخی</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</li>
-															<li class="style-page with-sub-menu hover">
-																<p class="close-menu"></p>
-																<a href="#" class="clearfix">
-																	<strong>
-																		اخبار
-																	</strong>
-																</a>
-																<div class="sub-menu" style="width: 40%;">
-																	<div class="content">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="blog-grid.html">شبکه
-																							بندی اخبار</a></li>
-																					<li><a class="subcategory_item"
-																							href="blog-list.html">لیست
-																							اخبار</a></li>
-																					<li><a class="subcategory_item"
-																							href="blog-sidebar.html">اخبار
-																							با سایدبار</a></li>
-																					<li><a class="subcategory_item"
-																							href="blog-detail.html">جزئیات
-																							خبر</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</li>
-															<li class="style-page with-sub-menu hover">
-																<p class="close-menu"></p>
-																<a class="clearfix">
-																	<strong>
-																		صفحات
-																	</strong>
-																</a>
-																<div class="sub-menu" style="width: 40%;">
-																	<div class="content">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<ul class="row-list">
-																					<li><a class="subcategory_item"
-																							href="about-us.html">درباره
-																							ما</a></li>
-																					<li><a class="subcategory_item"
-																							href="contact-us-v1.html">تماس
-																							با ما</a></li>
-																					<li><a class="subcategory_item"
-																							href="contact-us-v2.html">تماس
-																							با ما 2</a></li>
-																					<li><a class="subcategory_item"
-																							href="404.html">خطای 404</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="gallery.html">گالری</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="maintain.html">به
-																							زودی</a>
-																					</li>
-																					<li><a class="subcategory_item"
-																							href="faq.html">سوالات
-																							متداول</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
 															</li>
 														</ul>
 													</div>

@@ -64,26 +64,6 @@
 							<li><a href="#"><span>تور کلاسیک</span><label>6</label></a></li>
 						</ul>
 					</div>
-					<div class="module-rate clearfix">
-						<h3>رتبه ستاره ای</h3>
-						<ul>
-							<li class="active"><a href="#">
-									<div class="star"><span style="width: 75px"></span></div><label>15</label>
-								</a></li>
-							<li><a href="#">
-									<div class="star"><span style="width: 60px"></span></div><label>35</label>
-								</a></li>
-							<li><a href="#">
-									<div class="star"><span style="width: 45px"></span></div><label>20</label>
-								</a></li>
-							<li><a href="#">
-									<div class="star"><span style="width: 30px"></span></div><label>8</label>
-								</a></li>
-							<li><a href="#">
-									<div class="star"><span style="width: 15px"></span></div><label>4</label>
-								</a></li>
-						</ul>
-					</div>
 					<div class="module-ques clearfix">
 						<h3>سوالی دارید؟</h3>
 						<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
@@ -128,50 +108,38 @@
 							</div>
 						</div>
 						<div class="section-style4 products-list grid row number-col-3 so-filter-gird">
-
+							{% for tour in tours %}
+							
 							<div class="product-layout col-lg-6 col-md-6 col-sm-6 col-xs-6">
 								<div class="product-item-container item">
 									<div class="item-block so-quickview">
 										<div class="image">
-											<a href="tour-detail.html" target="_self">
-												<img src=" {% static 'image/catalog/demo/product/travel/p1.jpg' %}"
-													alt="Bougainvilleas on Lombard Street,  San Francisco, Tokyo"
+											<a href="{% url 'tour-detail' tour.slug %}" target="_self">
+												<img src=" {{tour.thumbnail.url}}"
 													class="img-responsive">
 											</a>
-											<span class="label-hot"><i class="fa fa-fire" aria-hidden="true"></i>تور
-												ویژه</span>
-											<span class="label-rate style2"><i class="fa fa-star"
-													aria-hidden="true"></i>رتبه بالا</span>
+											<span class="label-hot"><i class="fa fa-fire" aria-hidden="true"></i>{{tour.label}}</span>
 										</div>
 										<div class="item-content clearfix">
-											<h3><a href="tour-detail.html">تور ویژه 2 روز و 1 شب سفر به جزایر قناری</a>
+											<h3><a href="{% url 'tour-detail' tour.slug %}">{{tour.title}}</a>
 											</h3>
-											<div class="reviews-content">
-												<div class="star">
-													<span style="width: 60px"></span>
-												</div>
-												<a href="#" class="review-link" rel="nofollow">(15 رأی)</a>
-											</div>
 											<ul>
-												<li><i class="fa fa-map-marker" aria-hidden="true"></i> نیوزلند</li>
-												<li><i class="fa fa-clock-o" aria-hidden="true"></i> 2 روز</li>
-												<li><i class="fa fa-user-circle" aria-hidden="true"></i> 4 نفر</li>
+												<li><i class="fa fa-map-marker" aria-hidden="true"></i> {{tour.city.name}}</li>
+												<li><i class="fa fa-clock-o" aria-hidden="true"></i> {{tour.tour_duration}}</li>
+												<li><i class="fa fa-user-circle" aria-hidden="true"></i> {{tour.passengers_left}} نفر</li>
 											</ul>
-											<div class="des">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم
-												متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی ...</div>
 											<div class="item-bot clearfix">
 												<div class="price pull-left">
-													از <label>230,000</label><span> تومان</span>
+													از <label>{{tour.adult_price}}</label><span> تومان</span>
 												</div>
-												<a href="{% url 'reserve' %}"
-													class="book-now btn-quickview quickview quickview_handler pull-right"
-													title="مشاهده سریع" data-title="مشاهده سریع"
-													data-fancybox-type="iframe">مشاهده تور</a>
+												
+													<a href="{% url 'tour-detail' tour.slug %}"class="book-now btn-quickview  pull-right">مشاهده تور</a> -->
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							{% endfor %}
 
 						</div>
 						<div class="product-filter product-filter-bottom filters-panel">
