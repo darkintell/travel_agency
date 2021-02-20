@@ -51,12 +51,13 @@
 						</div>
 						{% endfor %}
 						<ul class="pagination">
-							<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-							<li class="active"><span>1</span></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+							{% if cities.has_previous %}
+							<li><a href="?page={{cities.previous_page_number}}"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+							{% endif %}
+							<li class="active"><span>{{cities.number}}</span></li>
+							{% if cities.has_next %}
+							<li><a href="?page={{cities.next_page_number}}"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+							{% endif %}
 						</ul>
 					</div>
 				</div>

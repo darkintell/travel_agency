@@ -144,12 +144,13 @@
 						</div>
 						<div class="product-filter product-filter-bottom filters-panel">
 							<ul class="pagination">
-								<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-								<li class="active"><span>1</span></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+								{% if tours.has_previous %}
+								<li><a href="?page={{tours.previous_page_number}}"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+								{% endif %}
+								<li><span class="active">{{tours.number}}</span></li>
+								{% if tours.has_next %}
+								<li><a href="?page={{tours.next_page_number}}"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+								{% endif %}
 							</ul>
 						</div>
 					</div>
