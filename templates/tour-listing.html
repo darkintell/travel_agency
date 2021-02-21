@@ -11,8 +11,8 @@
 					تور
 				</div>
 				<ul class="breadcrumb-cate">
-					<li><a href="index-portkey.html">خانه</a></li>
-					<li><a href="#">تور</a></li>
+					<li><a href="{% url 'home' %}">خانه</a></li>
+					<li><a href="{% url 'tour-listing' %}">تور</a></li>
 				</ul>
 			</div>
 		</div>
@@ -22,47 +22,18 @@
 					<span id="close-sidebar" class="fa fa-times"></span>
 					<div class="module-search clearfix">
 						<h3 class="modtitle">جستجوی تور</h3>
-						<form method="get" class="search-pr">
+						<form method="get" action="{% url 'tour-listing' %}" id="my_form" class="search-pr">
 							<div class="search-item city">
-								<input type="text" class="tour-search-input" id="city" placeholder="مقصد شما">
-							</div>
-							<div class="search-item date">
-								<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
-									id="date_from" placeholder="تاریخ شروع">
-							</div>
-							<div class="search-item date">
-								<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
-									id="date_to" placeholder="تاریخ پایان">
-							</div>
-							<div class="search-item item-select">
-								<select name="people">
-									<option value="1">تعداد</option>
-									<option value="2">2 نفر</option>
-									<option value="3">3 نفر</option>
-									<option value="4">4 نفر</option>
-								</select>
+								<input type="text" class="tour-search-input" id="city" placeholder="مقصد شما" name="city">
 							</div>
 							<div class="search-item item-budget">
-								<input type="number" class="hotel-budget-input" id="budget" placeholder="حداکثر بودجه">
+								<input type="number" class="hotel-budget-input" id="budget" placeholder="حداکثر بودجه" name="price">
 							</div>
 							<div class="button-submit">
 								<button type="submit" class="button">جستجوی تور <i class="fa fa-angle-left"
 										aria-hidden="true"></i></button>
-								<input type="hidden" name="s">
-								<input type="hidden" name="search_tour" value="1">
 							</div>
 						</form>
-					</div>
-					<div class="module-travel clearfix">
-						<h3>سبک سفر</h3>
-						<ul>
-							<li class="active"><a href="#"><span>روز تعطیل</span><label>15</label></a></li>
-							<li><a href="#"><span>ماجراجویی</span><label>20</label></a></li>
-							<li><a href="#"><span>تور خانوادگی</span><label>5</label></a></li>
-							<li><a href="#"><span>تور ارزان</span><label>30</label></a></li>
-							<li><a href="#"><span>تور آزاد</span><label>18</label></a></li>
-							<li><a href="#"><span>تور کلاسیک</span><label>6</label></a></li>
-						</ul>
 					</div>
 					<div class="module-ques clearfix">
 						<h3>سوالی دارید؟</h3>

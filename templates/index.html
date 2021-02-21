@@ -13,25 +13,26 @@
 							<div class="modcontent">
 								<div id="sohomepage-slider1" class="slider-home1">
 									<div class="so-homeslider sohomeslider-inner-1">
-
+										{% for city in top %}
+										  
+										
 										<div class="item">
 											<a href="#"  target="_self">
-												<img class="responsive" src="{% static 'image/catalog/demo/slider/home1/slider.jpg' %}">
+												<img class="responsive" src="{{city.image.url}}">
 											</a>
 											<div class="info">
 												<div class="top">مقصد</div>
-												<h3>ویتنام</h3>
-												<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم، <br>لورم
-													ایپسوم متن ساختگی با تولید سادگی نامفهوم متن ساختگی</p>
-												<a href="#">مطالعه بیشتر <i class="fa fa-angle-left"
+												<h3>{{city.name}}</h3>
+												<p>{{city.description}}</p>
+												<a href="{% url 'city-detail' city.id %}">مطالعه بیشتر <i class="fa fa-angle-left"
 														aria-hidden="true"></i></a>
 											</div>
 											<div class="info-right">
 												<img class="responsive"
-													src="{% static 'image/catalog/demo/slider/home1/text-right.png' %}">
+													src="{{city.image.url}}">
 											</div>
 										</div>
-
+										{% endfor %}
 									</div>
 								</div>
 							</div>
@@ -41,42 +42,20 @@
 				<div class="travel-search-content">
 					<div class="container page-builder-ltr">
 						<div class="row">
-							<form method="get" class="travl-search-advanced clearfix">
+							<form method="get" action="{% url 'tour-listing' %}" class="travl-search-advanced clearfix">
 								<div class="search-item city pull-left">
 									<p>مقصد</p>
-									<input type="text" class="tour-search-input" id="city"
-										placeholder="شهر، کشور یا مقصد مورد نظر">
-								</div>
-								<div class="search-item date pull-left">
-									<p>تاریخ رفت</p>
-									<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
-										id="date_from" placeholder="DD/MM/YY">
-								</div>
-								<div class="search-item date pull-left">
-									<p>تاریخ برگشت</p>
-									<input type="text" class="tour-search-input tarikh datepicker hasDatepicker"
-										id="date_to" placeholder="DD/MM/YY">
-								</div>
-								<div class="search-item item-select pull-left">
-									<p>تعداد</p>
-									<select name="people">
-										<option value="1">1 نفر</option>
-										<option value="2">2 نفر</option>
-										<option value="3">3 نفر</option>
-										<option value="4">4 نفر</option>
-									</select>
+									<input type="text" class="tour-search-input" id="city" name="city">
 								</div>
 								<div class="search-item item-budget pull-left">
 									<p>حداکثر بودجه</p>
-									<input type="number" class="hotel-budget-input" id="budget"
-										placeholder="1000 تومان">
+									<input type="number" class="hotel-budget-input" id="price"
+										placeholder="1000 تومان" name="price">
 								</div>
 								<div class="search-item button-submit pull-left">
 									<p>.</p>
 									<button type="submit" class="button">جستجوی تور <i class="fa fa-angle-left"
 											aria-hidden="true"></i></button>
-									<input type="hidden" name="s">
-									<input type="hidden" name="search_tour" value="1">
 								</div>
 							</form>
 						</div>

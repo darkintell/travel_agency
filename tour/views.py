@@ -5,7 +5,7 @@ from .models import TourModel, CityModel
 # Create your views here.
 def home(request):
     context = {
-    'a' : 'test',
+    'top' : CityModel.objects.all()[:2],
     'random_tours' : TourModel.objects.filter(is_active=True).order_by('?'),
     'top_tours' : TourModel.objects.filter(is_active=True).order_by('-score'),
     'cities' : CityModel.objects.order_by('?'),
@@ -29,9 +29,21 @@ def city_detail(request, slug):
 
 def tour_listing(request):
     tours_page = TourModel.objects.filter(is_active=True).order_by('-date_created')
+    
+    search_name = request.GET.get('city')
+    search_date = request.GET.get('date')
+    search_price = request.GET.get('price')
+    
+    if search_name:
+        tours_page = tours_page.filter(city__name=search_name)
+    if search_date:
+        tours_page = tours_page.filter(start_date=search_date)
+    if search_price:
+        tours_page = tours_page.filter(adult_price__lt=search_price)
     paginator = Paginator(tours_page, 1)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+    
     context={
         'tours': page_obj,
     }
