@@ -17,19 +17,14 @@
 										  
 										
 										<div class="item">
-											<a href="#"  target="_self">
 												<img class="responsive" src="{{city.image.url}}">
-											</a>
+											
 											<div class="info">
 												<div class="top">مقصد</div>
 												<h3>{{city.name}}</h3>
 												<p>{{city.description}}</p>
-												<a href="{% url 'city-detail' city.id %}">مطالعه بیشتر <i class="fa fa-angle-left"
+												<a href="{% url 'city-detail' city.slug %}">مطالعه بیشتر <i class="fa fa-angle-left"
 														aria-hidden="true"></i></a>
-											</div>
-											<div class="info-right">
-												<img class="responsive"
-													src="{{city.image.url}}">
 											</div>
 										</div>
 										{% endfor %}

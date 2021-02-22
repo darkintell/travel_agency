@@ -40,7 +40,7 @@ def tour_listing(request):
         tours_page = tours_page.filter(start_date=search_date)
     if search_price:
         tours_page = tours_page.filter(adult_price__lt=search_price)
-    paginator = Paginator(tours_page, 1)
+    paginator = Paginator(tours_page, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
@@ -52,7 +52,7 @@ def tour_listing(request):
 def city_lising(request):
     # Pagination
     cities = CityModel.objects.all()
-    paginator = Paginator(cities, 1)
+    paginator = Paginator(cities, 8)
     page_num = request.GET.get('page')
     page_obj = paginator.get_page(page_num)
     context = {
