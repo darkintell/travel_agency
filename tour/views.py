@@ -60,3 +60,6 @@ def city_lising(request):
         'tours': TourModel.objects.filter(is_active=True).order_by('-date_created'),
     }
     return render(request, 'city-listing.html', context)
+
+def about_us(request):
+    return render(request, 'about-us.html')
